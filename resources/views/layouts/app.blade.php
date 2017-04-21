@@ -24,9 +24,15 @@
 
         <script src="{{ asset('/js/jquery.js') }}"></script>
 
+        <script src="{{ asset('/js/materialize.js') }}"></script>
+
+        <script src="{{ asset('/js/jquery.slimscroll.js') }}"></script>
+
         <script src="{{ asset('/js/app.js') }}"></script>
 
         <link href="{{ asset('/css/app.css') }}" rel="stylesheet" />
+
+        <link href="{{ asset('/css/materialize.css') }}" rel="stylesheet" />
 
         <script src="{{ asset('/js/socket.io.js') }}"></script>
 

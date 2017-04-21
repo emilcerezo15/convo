@@ -25,4 +25,8 @@ $(document).ready(function () {
 
     var socket  =   io.connect('127.0.0.1:3000');
 
+    $('.me-thread-list').find('ul').slimScroll({
+        height: '98%'
+    })
+
 });

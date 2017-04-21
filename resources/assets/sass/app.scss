@@ -8,3 +8,74 @@
 // Bootstrap
 //@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
+@mixin fullHeight {
+  height: 100%;
+}
+
+@mixin floatImageLeft {
+  img {
+    float: left;
+    clear: both;
+    height: 100%;
+    width: auto;
+  }
+}
+
+html, body, .container {
+  margin: 0;
+  @include fullHeight;
+  font-family: "Raleway";
+  color: #E0E0E0;
+}
+
+
+body > .container {
+  @include fullHeight;
+
+  width: 100%;
+  max-width: none;
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  > div {
+    @include fullHeight;
+  }
+
+}
+
+.side-container {
+  float: left;
+  width: 28%;
+  background-color: #2E2E2E  ;
+
+  .me-header {
+    @include floatImageLeft;
+    height: 80px;
+  }
+
+  .me-thread-list {
+    height: calc(100% - 175px);
+
+    ul {
+
+      @include floatImageLeft;
+      li {
+        height: 65px;
+      }
+      margin: 0;
+    }
+  }
+
+  .search {
+    height: 80px;
+  }
+
+}
+
+.chat-container {
+  background-color: #343536  ;
+
+}
