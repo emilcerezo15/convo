@@ -18,6 +18,8 @@
     clear: both;
     height: 100%;
     width: auto;
+    border-radius: 25%;
+    margin-right: 8px;
   }
 }
 
@@ -42,17 +44,18 @@ body > .container {
 
   > div {
     @include fullHeight;
+    float: left;
   }
 
 }
 
 .side-container {
-  float: left;
   width: 28%;
-  background-color: #2E2E2E  ;
+  background-color: #2E2E2E;
 
   .me-header {
     @include floatImageLeft;
+    padding: 8px;
     height: 80px;
   }
 
@@ -62,20 +65,24 @@ body > .container {
     ul {
 
       @include floatImageLeft;
+
       li {
         height: 65px;
+        padding: 8px;
       }
+
       margin: 0;
     }
   }
 
   .search {
     height: 80px;
+    padding: 8px;
   }
 
 }
 
 .chat-container {
   background-color: #343536  ;
-
+  width: 72%;
 }
