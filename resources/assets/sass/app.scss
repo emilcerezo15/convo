@@ -16,8 +16,6 @@
   img {
     float: left;
     clear: both;
-    height: 100%;
-    width: auto;
     border-radius: 25%;
     margin-right: 8px;
   }
@@ -42,7 +40,7 @@ body > .container {
     padding: 0;
   }
 
-  > div {
+  > div.side-container, div.chat-container {
     @include fullHeight;
     float: left;
   }
@@ -52,23 +50,22 @@ body > .container {
 .side-container {
   width: 28%;
   background-color: #2E2E2E;
+  padding: 16px;
 
   .me-header {
     @include floatImageLeft;
-    padding: 8px;
-    height: 80px;
+    padding: 8px 0;
   }
 
   .me-thread-list {
-    height: calc(100% - 175px);
+    height: calc(100% - 145px);
 
     ul {
 
       @include floatImageLeft;
 
       li {
-        height: 65px;
-        padding: 8px;
+        padding: 8px 0;
       }
 
       margin: 0;
@@ -76,8 +73,7 @@ body > .container {
   }
 
   .search {
-    height: 80px;
-    padding: 8px;
+    padding: 8px 0;
   }
 
 }
@@ -85,4 +81,176 @@ body > .container {
 .chat-container {
   background-color: #343536  ;
   width: 72%;
+  padding: 16px;
+  position: relative;
+
+  .conversation-header {
+
+    padding: 8px 0;
+    border-bottom: 1px solid #777777;
+
+    @include floatImageLeft;
+
+    > .row {
+      margin: 0;
+    }
+  }
+
+
+
+  .conversation-body {
+
+    height: calc(100% - 150px);
+    padding: 0 0.75rem;
+    margin-top: 10px;
+
+    .conversation-thread {
+      overflow: auto;
+
+      > .row {
+        width: 70%;
+        margin: 10px auto 0;
+
+      }
+
+    }
+
+    .bubble {
+      padding: 8px;
+      position: relative;
+      width: 70%;
+      clear: both;
+
+      border-radius: 4px;
+
+      &.left {
+        margin: 8px 0 8px auto;
+      }
+
+      &.right {
+        margin: 8px auto 8px 0;
+      }
+
+      &.me-bubble {
+        background-color: #434242;
+      }
+
+      &.other-bubble {
+
+        background-color: #777777;
+
+      }
+
+      > div:first-child {
+        position: absolute;
+        content: " ";
+        width: 0;
+        height: 0;
+        border-style: solid;
+
+        &.left-arrow-bubble {
+          border-width: 6px 8px 6px 0;
+          border-color: transparent #434242 transparent transparent;
+          left: -8px;
+        }
+
+        &.right-arrow-bubble {
+          border-width: 6px 0 6px 8px;
+          border-color: transparent transparent transparent #777777;
+          right: -8px;
+        }
+      }
+    }
+
+  }
+
+  .conversation-textarea {
+    position: absolute;
+    bottom: 20px;
+    width: 80%;
+    margin: auto;
+    left:0;
+    right: 0;
+
+    textarea {
+      resize: none;
+      max-height: 100px;
+      height: auto;
+      border: 1px solid #777777;
+      border-radius: 4px;
+      padding: 5px;
+      width: 80%;
+
+      &:focus {
+        outline: 0
+      }
+    }
+
+    button {
+      background-color: #DCDBDB;
+      padding: 8px;
+      border-radius: 50%;
+      color: #000;
+      border: 0;
+      line-height: 0;
+      position: absolute;
+      top: 0;
+      margin-left: 5px;
+    }
+  }
+
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .chat-container {
+    .conversation-body {
+      .bubble {
+        width: 90%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+
+  .side-container {
+    width: 90px;
+
+    .me-header {
+      p, i {
+        display: none;
+
+      }
+    }
+
+    .me-thread-list {
+      li p, i {
+        display: none;
+      }
+
+      ul img {
+        float: none;
+      }
+    }
+  }
+
+  .chat-container {
+    width: calc(100% - 90px);
+
+    .conversation-body {
+      .conversation-thread {
+        > .row {
+          width: 90%;
+        }
+      }
+    }
+    .conversation-textarea {
+      textarea {
+        width: 70%;
+      }
+    }
+  }
+
 }
