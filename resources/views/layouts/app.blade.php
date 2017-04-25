@@ -44,6 +44,8 @@
 
     <body>
 
+        <input id="BASE_URL" type="hidden" value="{{ URL::to('/') }}"/>
+
         <div class="container">
 
             @yield('content')

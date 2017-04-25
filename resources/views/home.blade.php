@@ -21,86 +21,11 @@
 
         <div class="me-thread-list">
             <ul>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
-                <li>
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
-                    <p>Emil Cerezo</p>
-                    <i>Online</i>
-                </li>
+<!--                <li>-->
+<!--                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />-->
+<!--                    <p>Emil Cerezo</p>-->
+<!--                    <i>Online</i>-->
+<!--                </li>-->
             </ul>
         </div>
     </div>

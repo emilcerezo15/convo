@@ -14,6 +14,10 @@ io.on('connection', function(socket){
         console.log('user disconnected');
     });
 
+//    socket.on('getUsers', function () {
+       io.emit('ajxUsers');
+//    });
+
 });
 
 http.listen(3000, function(){
