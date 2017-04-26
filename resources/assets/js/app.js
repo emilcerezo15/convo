@@ -23,10 +23,12 @@
 
 $(document).ready(function () {
 
-    var socket  =   io.connect('127.0.0.1:3000');
-    var baseurl = $('#BASE_URL').val();
+    var socket          =   io.connect('127.0.0.1:3000');
+    var baseurl         = $('#BASE_URL').val();
+    var meThread_list   = $('.me-thread-list');
+    var token           = $('input[name=_token]').val();
 
-    $('.me-thread-list').find('ul').slimScroll({
+    meThread_list.find('ul').slimScroll({
         height: '100%'
     });
 
@@ -34,20 +36,50 @@ $(document).ready(function () {
         height: '100%'
     });
 
+    meThread_list.on('click', 'li', function () {
+        var id  = $(this).find('p').data('id');
+        var msg = [];
+
+        $.ajax({
+            url :baseurl + '/getThread',
+            type: 'get',
+            data : {
+                "_token"    :   token,
+                "id"        :   id
+            },
+            success: function (response) {
+
+                $.each(response, function(i, v) {
+                    msg.push('<div class="bubble '+ (v['user_status'] == 0 ? ' me-bubble right' : 'other-bubble left') +'">' +
+                        '<div class="'+ (v['user_status'] == 0 ? 'right-arrow-bubble' : 'left-arrow-bubble') +'"></div>' +
+                        '<div class="conversation-content">' +
+                        '<p>' + v['body'] + '</p>' +
+                        '</div>' +
+                        '</div>');
+                });
+
+                $('.conversation-thread').find('.row').html(msg);
+
+            }
+
+        });
+    });
+
     socket.on('ajxUsers', function() {
+
         $.ajax({
             url :baseurl + '/getUsers',
             type: 'get',
             success: function (response) {
-
                 var arr = [];
 
                 $.each(response, function (i, v) {
-                    arr.push('<li><img src="'+ baseurl +'/img/default-photo-45px.png" alt="avatar-image"/ ><p>'+ v['firstname'] +'</p><i>Online</i></li>');
+                    arr.push('<li><img src="'+ baseurl +'/img/default-photo-45px.png" alt="avatar-image"/ ><p data-id="' + v['id'] + '">'+ v['name'] +'</p><i>Online</i></li>');
                 });
 
                 $('.me-thread-list').find('ul').html(arr);
             }
+
         });
     });
 

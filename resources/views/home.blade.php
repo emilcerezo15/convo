@@ -20,7 +20,7 @@
         </div>
 
         <div class="me-thread-list">
-            <ul>
+            <ul >
 <!--                <li>-->
 <!--                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />-->
 <!--                    <p>Emil Cerezo</p>-->
@@ -46,73 +46,17 @@
         <div class="conversation-body">
             <div class="conversation-thread">
                 <div class="row">
-                    <div class="bubble me-bubble left">
+                    <div class="bubble other-bubble left">
                         <div class="left-arrow-bubble"></div>
                         <div class="conversation-content">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
                     </div>
 
-                    <div class="bubble other-bubble right">
+                    <div class="bubble me-bubble right">
                         <div class="right-arrow-bubble"></div>
                         <div class="conversation-content">
                             <p>Phasellus neque metus, malesuada non purus ut, aliquet fermentum arcu.</p>
-                        </div>
-                    </div>
-                    <div class="bubble me-bubble left">
-                        <div class="left-arrow-bubble"></div>
-                        <div class="conversation-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        </div>
-                    </div>
-
-                    <div class="bubble other-bubble right">
-                        <div class="right-arrow-bubble"></div>
-                        <div class="conversation-content">
-                            <p>Phasellus neque metus, malesuada non purus ut, aliquet fermentum arcu.</p>
-                        </div>
-                    </div>
-
-                    <div class="bubble other-bubble right">
-                        <div class="right-arrow-bubble"></div>
-                        <div class="conversation-content">
-                            <p>Phasellus neque metus, malesuada non purus ut, aliquet fermentum arcu.</p>
-                        </div>
-                    </div>
-                    <div class="bubble other-bubble right">
-                        <div class="right-arrow-bubble"></div>
-                        <div class="conversation-content">
-                            <p>Phasellus neque metus, malesuada non purus ut, aliquet fermentum arcu.</p>
-                        </div>
-                    </div>
-                    <div class="bubble me-bubble left">
-                        <div class="left-arrow-bubble"></div>
-                        <div class="conversation-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        </div>
-                    </div>
-                    <div class="bubble other-bubble right">
-                        <div class="right-arrow-bubble"></div>
-                        <div class="conversation-content">
-                            <p>Phasellus neque metus, malesuada non purus ut, aliquet fermentum arcu.</p>
-                        </div>
-                    </div>
-                    <div class="bubble me-bubble left">
-                        <div class="left-arrow-bubble"></div>
-                        <div class="conversation-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                        </div>
-                    </div>
-                    <div class="bubble other-bubble right">
-                        <div class="right-arrow-bubble"></div>
-                        <div class="conversation-content">
-                            <p>Phasellus neque metus, malesuada non purus ut, aliquet fermentum arcu.</p>
-                        </div>
-                    </div>
-                    <div class="bubble me-bubble left">
-                        <div class="left-arrow-bubble"></div>
-                        <div class="conversation-content">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         </div>
                     </div>
                 </div>
@@ -121,7 +65,7 @@
 
         <div class="conversation-textarea">
             <textarea placeholder="Type a message here"></textarea>
-            <button> <i class="material-icons">launch</i>
+            <button> <i class="material-icons">send</i>
         </div>
 
     </div>

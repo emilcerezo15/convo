@@ -12,7 +12,7 @@
 
         <meta name="csrf-token" content="{{ csrf_token() }}" />
 
-        <title>iPost - @yield('title')</title>
+        <title>Convo - @yield('title')</title>
 
         <script>
 
