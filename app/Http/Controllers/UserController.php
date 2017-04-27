@@ -12,6 +12,11 @@ use Mockery\CountValidator\Exception;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function home ()
     {
         return view('home');
@@ -61,15 +66,15 @@ class UserController extends Controller
         $email = $request->input('email');
         $password = $request->input('password');
 
-//        if($password) {
-//            if (Auth::attempt(['email' => $email, 'password' => $password])) {
-//                return redirect()->intended('home');
-//            }
-//        } else {
-//            if(User::where('email', $email)->exists()) {
-//                return 1;
-//            }
-//        }
+        if($password) {
+            if (Auth::attempt(['email' => $email, 'password' => $password])) {
+                return redirect()->intended('home');
+            }
+        } else {
+            if(User::where('email', $email)->exists()) {
+                return 1;
+            }
+        }
 
         return $password;
     }
