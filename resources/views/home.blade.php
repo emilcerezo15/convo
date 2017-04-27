@@ -5,7 +5,7 @@
 @section('content')
     <div class="side-container">
         <div class="me-header">
-            <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
+            <img src="{{ URL::to('/img/default-photo-v2-45px.png') }}" alt="avatar-image" />
 
             <p>Emil Cerezo</p>
             <i>Online</i>
@@ -35,7 +35,7 @@
         <div class="conversation-header">
             <div class="row">
                 <div class="col s10">
-                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
+                    <img src="{{ URL::to('/img/default-photo-v2-45px.png') }}" alt="avatar-image" />
                     <p>John Doe</p>
                     <i>Online</i>
                 </div>

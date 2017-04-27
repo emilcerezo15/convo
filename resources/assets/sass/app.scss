@@ -21,49 +21,92 @@
   }
 }
 
-html, body, .container {
-  margin: 0;
-  @include fullHeight;
+html {
+  max-width: 1600px;
+  margin: auto;
   font-family: "Raleway";
   color: #000000;
-}
-
-
-body > .container {
   @include fullHeight;
 
-  width: 100%;
-  max-width: none;
-
-  .row {
-    margin: auto;
-  }
-
-  p {
-    margin: 0;
-    padding: 0;
-  }
-
-  > div.side-container, div.chat-container {
+  body {
     @include fullHeight;
-    float: left;
-  }
+    > .container {
+      margin: 0;
 
+      @include fullHeight;
+
+      width: 100%;
+      max-width: none;
+
+      .row {
+        margin: auto;
+      }
+
+      p {
+        margin: 0;
+        padding: 0;
+      }
+
+      > div.side-container, div.chat-container {
+        @include fullHeight;
+        float: left;
+      }
+    }
+  }
 }
 
-.row.login {
-  .input-field {
-    margin: 0;
-  }
-  width: 60%;
-
+input {
+  color: #000000
 }
 
+
+/******************************** LOGIN *******************************/
+.login {
+  margin: auto;
+  display: flex;
+  height: 100vh;
+
+  @mixin loginBeforeAfter {
+    flex-grow: 1;
+    content: ' ';
+  }
+
+  &:before {
+    @include loginBeforeAfter;
+  }
+  &:after {
+    @include loginBeforeAfter;
+  }
+
+  > div {
+    padding: 48px 40px 36px;
+    width: 42%;
+    background-color: #fff;
+
+
+    .row {
+
+      &.registration{
+        margin-top:30px
+      }
+      &.signin-footer {
+        margin: 20px 0 30px;
+
+        a {
+          margin-right: 25px;
+        }
+      }
+    }
+  }
+}
+
+/******************************** SIDE CONTAINER *****************************/
 .side-container {
   width: 28%;
 //  background-color: #2E2E2E;
   padding: 16px;
-  border-right: 1px solid #9e9e9e;
+  border-right: solid 1px rgba(51,51,51,0.12);
+  background-color: #fff3e0;
 
   .me-header {
     @include floatImageLeft;
@@ -91,9 +134,11 @@ body > .container {
 
 }
 
+/*************************** Chat CONTAINER *****************************/
 .chat-container {
 //  background-color: #343536  ;
-  background-color: #e0e0e0  ;
+//  background-color: #e0e0e0  ;
+//  background-color: #f5f2f0  ;
   width: 72%;
   padding: 16px;
   position: relative;
@@ -101,7 +146,7 @@ body > .container {
   .conversation-header {
 
     padding: 8px 0;
-    border-bottom: 1px solid #777777;
+    border-bottom: solid 1px rgba(51,51,51,0.12);
 
     @include floatImageLeft;
 
@@ -130,7 +175,7 @@ body > .container {
     }
 
     .bubble {
-      padding: 8px;
+      padding: 10px 20px;
       position: relative;
       width: 70%;
       clear: both;
@@ -146,14 +191,14 @@ body > .container {
       }
 
       &.me-bubble {
-        background-color: #ffecb3;
+        background-color: #ffb74d ;
 //        background-color: #434242;
       }
 
       &.other-bubble {
 
 //        background-color: #777777;
-        background-color: #ffffff   ;
+        background-color: #fff3e0   ;
 
       }
 
@@ -166,13 +211,13 @@ body > .container {
 
         &.left-arrow-bubble {
           border-width: 6px 8px 6px 0;
-          border-color: transparent #ffffff transparent transparent;
+          border-color: transparent #fff3e0 transparent transparent;
           left: -8px;
         }
 
         &.right-arrow-bubble {
           border-width: 6px 0 6px 8px;
-          border-color: transparent transparent transparent #ffecb3;
+          border-color: transparent transparent transparent #ffb74d;
           right: -8px;
         }
       }
@@ -192,10 +237,11 @@ body > .container {
       resize: none;
       max-height: 100px;
       height: auto;
-      border: 1px solid #777777;
+      border: solid 1px rgba(51,51,51,0.3);
       border-radius: 4px;
       padding: 5px;
       width: 80%;
+      background-color: #fff;
 
       &:focus {
         outline: 0
@@ -203,7 +249,7 @@ body > .container {
     }
 
     button {
-      background-color: #DCDBDB;
+      background-color: #ffb74d;
       padding: 8px;
       border-radius: 50%;
       color: #000;
@@ -212,12 +258,17 @@ body > .container {
       position: absolute;
       top: 0;
       margin-left: 5px;
+
+      i {
+        color: #ffffff;
+        font-size: 16px;
+      }
     }
   }
 
 }
 
-/* Media Queries */
+/**************************** Media Queries ***********************************/
 @media screen and (max-width: 768px) {
   .chat-container {
     .conversation-body {

@@ -7,6 +7,7 @@ use App\User;
 use App\Thread;
 use App\Message;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
 use Mockery\CountValidator\Exception;
 
 class UserController extends Controller
@@ -53,5 +54,23 @@ class UserController extends Controller
         } else {
             return view('login');
         }
+    }
+
+    public function validateUser (Request $request)
+    {
+        $email = $request->input('email');
+        $password = $request->input('password');
+
+//        if($password) {
+//            if (Auth::attempt(['email' => $email, 'password' => $password])) {
+//                return redirect()->intended('home');
+//            }
+//        } else {
+//            if(User::where('email', $email)->exists()) {
+//                return 1;
+//            }
+//        }
+
+        return $password;
     }
 }
