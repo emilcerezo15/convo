@@ -7,15 +7,10 @@ use App\User;
 use App\Thread;
 use App\Message;
 use Illuminate\Support\Facades\Crypt;
-use Illuminate\Support\Facades\Hash;
 use Mockery\CountValidator\Exception;
 
 class UserController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     public function home ()
     {

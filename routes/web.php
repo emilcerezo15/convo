@@ -21,4 +21,4 @@ Route::get('/getThread',   'UserController@getThread');
 
 Route::get('/validateUser',   'UserController@validateUser')->name('validateUser');
 
-Auth::routes();
+Route::get('/login',   'UserController@login')->name('login');

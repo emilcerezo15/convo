@@ -12,22 +12,22 @@
     </div>
 
     <div class="search">
-        <input type="text" class="validate" placeholder="Search" />
-    </div>
-    </form>
-</div>
-
-<div class="me-thread-list">
-    <ul >
-        <!--                <li>-->
         <form class="col s12" action="">
             <div class=" col-s12">
-                <!--                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />-->
-                <!--                    <p>Emil Cerezo</p>-->
-                <!--                    <i>Online</i>-->
-                <!--                </li>-->
-    </ul>
-</div>
+                <input type="text" class="validate" placeholder="Search" />
+            </div>
+        </form>
+    </div>
+
+    <div class="me-thread-list">
+        <ul >
+            <!--                <li>-->
+            <!--                    <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />-->
+            <!--                    <p>Emil Cerezo</p>-->
+            <!--                    <i>Online</i>-->
+            <!--                </li>-->
+        </ul>
+    </div>
 </div>
 
 <div class="chat-container">
@@ -35,7 +35,7 @@
     <div class="conversation-header">
         <div class="row">
             <div class="col s10">
-                <img src="{{ URL::to('/img/default-photo-v2-45px.png') }}" alt="avatar-image" />
+                <img src="{{ URL::to('/img/default-photo-45px.png') }}" alt="avatar-image" />
                 <p>John Doe</p>
                 <i>Online</i>
             </div>

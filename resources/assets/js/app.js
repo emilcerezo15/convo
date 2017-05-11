@@ -74,11 +74,7 @@ $(document).ready(function () {
                 var arr = [];
 
                 $.each(response, function (i, v) {
-                    arr.push('<li>' +
-                        '<img src="'+ baseurl +'/img/default-photo-v2-45px.png" alt="avatar-image"/ >' +
-                        '<p data-id="' + v['id'] + '">'+ v['name'] +'</p>' +
-                        '<i>Online</i>' +
-                        '</li>');
+                    arr.push('<li><img src="'+ baseurl +'/img/default-photo-45px.png" alt="avatar-image"/ ><p data-id="' + v['id'] + '">'+ v['name'] +'</p><i>Online</i></li>');
                 });
 
                 $('.me-thread-list').find('ul').html(arr);
@@ -86,8 +82,6 @@ $(document).ready(function () {
 
         });
     });
-
-    $('.login.carousel').carousel({fullWidth: true});
 
     var option = {
         success:function (response) {
@@ -101,6 +95,6 @@ $(document).ready(function () {
         }
     };
 
-   $('#validateUser').ajaxForm(option);
+    $('#validateUser').ajaxForm(option);
 
 });

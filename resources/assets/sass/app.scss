@@ -21,92 +21,49 @@
   }
 }
 
-html {
-  max-width: 1600px;
-  margin: auto;
+html, body, .container {
+  margin: 0;
+  @include fullHeight;
   font-family: "Raleway";
   color: #000000;
+}
+
+
+body > .container {
   @include fullHeight;
 
-  body {
+  width: 100%;
+  max-width: none;
+
+  .row {
+    margin: auto;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  > div.side-container, div.chat-container {
     @include fullHeight;
-    > .container {
-      margin: 0;
-
-      @include fullHeight;
-
-      width: 100%;
-      max-width: none;
-
-      .row {
-        margin: auto;
-      }
-
-      p {
-        margin: 0;
-        padding: 0;
-      }
-
-      > div.side-container, div.chat-container {
-        @include fullHeight;
-        float: left;
-      }
-    }
+    float: left;
   }
+
 }
 
-input {
-  color: #000000
+.row.login {
+  .input-field {
+    margin: 0;
+  }
+  width: 60%;
+
 }
 
-
-/******************************** LOGIN *******************************/
-.login {
-  margin: auto;
-  display: flex;
-  height: 100vh;
-
-  @mixin loginBeforeAfter {
-    flex-grow: 1;
-    content: ' ';
-  }
-
-  &:before {
-    @include loginBeforeAfter;
-  }
-  &:after {
-    @include loginBeforeAfter;
-  }
-
-  > div {
-    padding: 48px 40px 36px;
-    width: 42%;
-    background-color: #fff;
-
-
-    .row {
-
-      &.registration{
-        margin-top:30px
-      }
-      &.signin-footer {
-        margin: 20px 0 30px;
-
-        a {
-          margin-right: 25px;
-        }
-      }
-    }
-  }
-}
-
-/******************************** SIDE CONTAINER *****************************/
 .side-container {
   width: 28%;
 //  background-color: #2E2E2E;
   padding: 16px;
-  border-right: solid 1px rgba(51,51,51,0.12);
-  background-color: #fff3e0;
+  border-right: 1px solid #9e9e9e;
 
   .me-header {
     @include floatImageLeft;
@@ -134,11 +91,9 @@ input {
 
 }
 
-/*************************** Chat CONTAINER *****************************/
 .chat-container {
 //  background-color: #343536  ;
-//  background-color: #e0e0e0  ;
-//  background-color: #f5f2f0  ;
+  background-color: #e0e0e0  ;
   width: 72%;
   padding: 16px;
   position: relative;
@@ -146,7 +101,7 @@ input {
   .conversation-header {
 
     padding: 8px 0;
-    border-bottom: solid 1px rgba(51,51,51,0.12);
+    border-bottom: 1px solid #777777;
 
     @include floatImageLeft;
 
@@ -175,7 +130,7 @@ input {
     }
 
     .bubble {
-      padding: 10px 20px;
+      padding: 8px;
       position: relative;
       width: 70%;
       clear: both;
@@ -191,14 +146,14 @@ input {
       }
 
       &.me-bubble {
-        background-color: #ffb74d ;
+        background-color: #ffecb3;
 //        background-color: #434242;
       }
 
       &.other-bubble {
 
 //        background-color: #777777;
-        background-color: #fff3e0   ;
+        background-color: #ffffff   ;
 
       }
 
@@ -211,13 +166,13 @@ input {
 
         &.left-arrow-bubble {
           border-width: 6px 8px 6px 0;
-          border-color: transparent #fff3e0 transparent transparent;
+          border-color: transparent #ffffff transparent transparent;
           left: -8px;
         }
 
         &.right-arrow-bubble {
           border-width: 6px 0 6px 8px;
-          border-color: transparent transparent transparent #ffb74d;
+          border-color: transparent transparent transparent #ffecb3;
           right: -8px;
         }
       }
@@ -237,11 +192,10 @@ input {
       resize: none;
       max-height: 100px;
       height: auto;
-      border: solid 1px rgba(51,51,51,0.3);
+      border: 1px solid #777777;
       border-radius: 4px;
       padding: 5px;
       width: 80%;
-      background-color: #fff;
 
       &:focus {
         outline: 0
@@ -249,7 +203,7 @@ input {
     }
 
     button {
-      background-color: #ffb74d;
+      background-color: #DCDBDB;
       padding: 8px;
       border-radius: 50%;
       color: #000;
@@ -258,17 +212,12 @@ input {
       position: absolute;
       top: 0;
       margin-left: 5px;
-
-      i {
-        color: #ffffff;
-        font-size: 16px;
-      }
     }
   }
 
 }
 
-/**************************** Media Queries ***********************************/
+/* Media Queries */
 @media screen and (max-width: 768px) {
   .chat-container {
     .conversation-body {

@@ -140,7 +140,7 @@ $(document).ready(function () {
                 var arr = [];
 
                 $.each(response, function (i, v) {
-                    arr.push('<li>' + '<img src="' + baseurl + '/img/default-photo-v2-45px.png" alt="avatar-image"/ >' + '<p data-id="' + v['id'] + '">' + v['name'] + '</p>' + '<i>Online</i>' + '</li>');
+                    arr.push('<li><img src="' + baseurl + '/img/default-photo-45px.png" alt="avatar-image"/ ><p data-id="' + v['id'] + '">' + v['name'] + '</p><i>Online</i></li>');
                 });
 
                 $('.me-thread-list').find('ul').html(arr);
@@ -149,10 +149,9 @@ $(document).ready(function () {
         });
     });
 
-    $('.login.carousel').carousel({ fullWidth: true });
-
     var option = {
         success: function success(response) {
+            alert(response);
             if (response) {
                 var finalStep = '' + '<input type="password" class="validate" id="password" name="password"/>' + '<label for="password" data-error="Invalid e-mail">Password</label>';
 
